@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs/OrchardCore.ExpressionFormFieldValidation
+/obj
+/bin

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.0.0-rc1-11937" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-rc1-11937" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-rc1-11937" />
+    <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="1.0.0-rc1-11937" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-rc1-11937" />
+    <PackageReference Include="OrchardCore.Workflows.Abstractions" Version="1.0.0-rc1-11937" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="3.5.0-beta3-final" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Scripting" Version="3.5.0-beta3-final" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="3.5.0-beta3-final">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,48 @@
+@using OrchardCore.ExpressionFormFieldValidation.Enums
+@using OrchardCore.ExpressionFormFieldValidation.Helpers
+@model ValidateFormFieldTaskViewModel
+@{
+
+    var expressionTypesValues = Enum.GetValues(typeof(ExpressionType))
+        .Cast<ExpressionType>()
+        .Select(x => new SelectListItem
+        {
+            Text = x.ToString(),
+            Value = ((int)x).ToString()
+        });
+}
+
+<div class="form-group" asp-validation-class-for="FieldName">
+    <label asp-for="FieldName">@T["Field Name"]</label>
+    <input type="text" asp-for="FieldName" class="form-control" />
+    <span asp-validation-for="FieldName"></span>
+    <span class="hint">@T["The name of the form field to validate."]</span>
+</div>
+
+<div class="form-group" asp-validation-class-for="FieldType">
+    <label asp-for="FieldType">@T["Field type"]</label>
+    <select asp-items="FieldTypes.BuildInTypes" class="form-control" asp-for="FieldType"></select>
+    <span asp-validation-for="FieldType"></span>
+    <span class="hint">@T["The type of the field, to validate."]</span>
+</div>
+
+<div class="form-group" asp-validation-class-for="ExpressionType">
+    <label asp-for="ExpressionType">@T["Expression type"]</label>
+    <select asp-items="expressionTypesValues" class="form-control" asp-for="ExpressionType" id="expression-type"></select>
+    <span asp-validation-for="ExpressionType"></span>
+    <span class="hint">@T["The expression type."]</span>
+</div>
+
+<div class="form-group" asp-validation-class-for="Expression" id="expression-field">
+    <label asp-for="Expression">@T["Expression"]</label>
+    <input type="text" asp-for="Expression" class="form-control" />
+    <span asp-validation-for="Expression"></span>
+    <span class="hint">@T["The validation expression. Write your expression based on the selected expression type."]</span>
+</div>
+
+<div class="form-group" asp-validation-class-for="ErrorMessage">
+    <label asp-for="ErrorMessage">@T["Error Message"]</label>
+    <input type="text" asp-for="ErrorMessage" class="form-control" />
+    <span asp-validation-for="ErrorMessage"></span>
+    <span class="hint">@T["The validation error message to display."]</span>
+</div>
