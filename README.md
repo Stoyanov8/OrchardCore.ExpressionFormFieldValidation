@@ -28,10 +28,10 @@ Based on the selected **ExpressionType**, write either lambda expression or RegE
 
 Based on the selected **FieldType** you can use different methods in your expression. <br> 
 
-*Example*: *Let's say you want to validate that DateTime Input filed is the same day as today.
+*Example*: *Let's say you want to validate that DateTime Input field is the same day as today.
 
 Create new **Expression Validate Form Field** Task, set the **ExpressionType** to lambda, set **FieldType** to DateTime. </br>
-In the Expression field type: **dt => dt.Date == DateTime.Today***
+In the Expression field type: **dt => dt.Date == DateTime.Today**
 
 
 ## How does lambda expression evaluation work ?
